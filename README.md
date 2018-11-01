@@ -26,7 +26,7 @@ Professor
 Student  
 
 - GET
-/webapi/student  
+/webapi/students  
 - POST
 /webapi/students  
 `{
