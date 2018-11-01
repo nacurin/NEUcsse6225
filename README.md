@@ -90,7 +90,52 @@ Program
             ]
         }
     ],
-    "programId": 1
+    "courseId": 1
 }`  
 - DEL
-/webapi/programs/{id}  
+/webapi/courses/{id}  
+
+Course
+
+- GET
+/webapi/courses
+- POST
+/webapi/courses  
+`{
+            "board": "default",
+            "courseId": 0,
+            "lectures": [
+                {
+                    "lectureId": 1,
+                    "material": "no image",
+                    "notes": "lalaland"
+                }
+            ],
+            "professor": 111,
+            "roster": "roster",
+            "studentTA": 0,
+            "students": [
+                1
+            ]
+}`
+- PUT   
+/webapi/courses/{id}  
+`{
+            "board": "default board",
+            "courseId": 0,
+            "lectures": [
+                {
+                    "lectureId": 0,
+                    "material": "no image",
+                    "notes": "Mia"
+                }
+            ],
+            "professor": 111,
+            "roster": "LALALAND",
+            "studentTA": 0,
+            "students": [
+                1
+            ]
+        }`  
+- DEL
+/webapi/courses/{id}  
