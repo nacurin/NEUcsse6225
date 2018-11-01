@@ -13,8 +13,7 @@ Professor
 	"professorId":	"12",
 	"joiningDate":	"2016-04-06T16:00:05"
 }`  
-- PUT
-/webapi/professors/{id}  
+- PUT /webapi/professors/{id}  
 `{
     "department": "cs",
     "firstName": "Kevin",
