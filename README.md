@@ -36,7 +36,7 @@ Student
 	"programName":	"art"
 }`
 - PUT 
-/webapi/students/{id}
+/webapi/students/{id}  
 `{
 	"name":		"Jackie",
 	"image":	"no image",
@@ -45,7 +45,7 @@ Student
 }`  
 - DEL  
 /webapi/lectures/{id}
-- PUT /webapi/lectures/{id}
+- PUT /webapi/lectures/{id}  
 `{
 	"notes":		"Jackie Chen",
 	"material":		"new image"
