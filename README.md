@@ -45,11 +45,6 @@ Student
 }`  
 - DEL  
 /webapi/lectures/{id}
-- PUT /webapi/lectures/{id}  
-`{
-	"notes":		"Jackie Chen",
-	"material":		"new image"
-}`  
 
 Program
 
