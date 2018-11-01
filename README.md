@@ -1,5 +1,6 @@
 #APIs  
-
+EBS Link: `Test2-env.xkcbwn3xgw.us-west-2.elasticbeanstalk.com`  
+  
 Professor  
 
 - GET
@@ -50,6 +51,7 @@ Student
 	"notes":		"Jackie Chen",
 	"material":		"new image"
 }`  
+
 Program
 
 - GET
@@ -71,3 +73,30 @@ Program
 		}
 	]
 }`
+- PUT   
+/webapi/programs/{id}  
+`{
+    "courses": [
+        {
+            "board": "default board",
+            "courseId": 0,
+            "lectures": [
+                {
+                    "lectureId": 0,
+                    "material": "no image",
+                    "name": "7000",
+                    "notes": "Jackie"
+                }
+            ],
+            "professor": 111,
+            "roster": "roster",
+            "studentTA": 0,
+            "students": [
+                1
+            ]
+        }
+    ],
+    "programId": 1
+}`  
+- DEL
+/webapi/programs/{id}  
