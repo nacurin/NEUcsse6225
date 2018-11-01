@@ -1,5 +1,7 @@
 #APIs  
+
 Professor  
+
 - GET
 /webapi/professors
 - POST
@@ -10,11 +12,21 @@ Professor
 	"professorId":	"12",
 	"joiningDate":	"2016-04-06T16:00:05"
 }`  
+- PUT
+/webapi/professors/{id}  
+`{
+    "department": "cs",
+    "firstName": "Kevin",
+    "joiningDate": "2016-04-02T16:00:05",
+    "professorId": 2
+}` 
+- DEL
+`/webapi/professors/{id}`
 
 Student  
 
 - GET
-/webapi/student
+/webapi/student  
 - POST
 /webapi/students  
 `{
@@ -23,7 +35,21 @@ Student
 	"coursesEnrolled":	"101",
 	"programName":	"art"
 }`
-
+- PUT 
+/webapi/students/{id}
+`{
+	"name":		"Jackie",
+	"image":	"no image",
+	"coursesEnrolled":	"101",
+	"programName":	"art"
+}`  
+- DEL  
+/webapi/lectures/{id}
+- PUT /webapi/lectures/{id}
+`{
+	"notes":		"Jackie Chen",
+	"material":		"new image"
+}`  
 Program
 
 - GET
