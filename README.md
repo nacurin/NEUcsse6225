@@ -50,7 +50,7 @@ Student
 - DEL  
 /webapi/students/{id}
 
-Boards
+Board
 
 - GET
 /webapi/boards
@@ -105,15 +105,15 @@ Course
 Course
 
 - GET
-/webapi/announcements
+/webapi/announcements  
 - POST
-/webapi/announcements
+/webapi/announcements  
 `{
 	"boardId": 		"33",
 	"announcementId":	"111",
 	"announcementText": 	"blabla"
 }`  
-- PUT   
+- PUT  
 /webapi/courses/{boardId}\_{anouncementId}
 `{
 	"announcementText": 	"biubiubiu"
