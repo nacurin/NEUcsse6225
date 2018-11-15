@@ -114,7 +114,7 @@ Course
 	"announcementText": 	"blabla"
 }`  
 - PUT  
-/webapi/courses/{boardId}\_{anouncementId}
+/webapi/courses/{boardId}\_{anouncementId}  
 `{
 	"announcementText": 	"biubiubiu"
 }`
