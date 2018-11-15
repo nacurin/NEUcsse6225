@@ -102,7 +102,7 @@ Course
 - DEL
 /webapi/courses/{id}  
 
-Course
+Announcement
 
 - GET
 /webapi/announcements  
