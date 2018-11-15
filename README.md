@@ -7,18 +7,19 @@ Professor
 /webapi/professors
 - POST
 /webapi/professors  
-`{
-	"firstName":	"A",
-	"department":	"B",
-	"professorId":	"12",
-	"joiningDate":	"2016-04-06T16:00:05"
-}`  
+{ 
+	"firstName":	"Ozpin the second", 
+	"lastName": "Ozma",
+	"department":	"headmaster", 
+	"professorId":	"prof.ozp", 
+	"joiningDate":	"2019-04-06T16:00:05"
+} 
 - PUT /webapi/professors/{id}  
-`{
-    "department": "cs",
-    "firstName": "Kevin",
-    "joiningDate": "2016-04-02T16:00:05",
-    "professorId": 2
+`{ 
+	"firstName":	"nobody", 
+	"lastName": "who",
+	"department":	"headmaster", 
+	"joiningDate":	"2016-04-06T16:00:05"
 }` 
 - DEL
 `/webapi/professors/{id}`
@@ -30,70 +31,48 @@ Student
 - POST
 /webapi/students  
 `{
-	"name":		"Jackie",
-	"image":	"no image",
-	"coursesEnrolled":	"101",
-	"programName":	"art"
+	"studentId":	"wis.sch",
+	"firstName":	"Weiss",
+	"lastName":	"Schnee",
+	"joiningDate":	"8102",
+	"registeredCourses":	["mgc101", "ice102"],
+	"department":	"hunter"
 }`
 - PUT 
 /webapi/students/{id}  
 `{
-	"name":		"Jackie",
-	"image":	"no image",
-	"coursesEnrolled":	"101",
-	"programName":	"art"
+	"firstName":	"who",
+	"lastName":	"who",
+	"joiningDate":	"8102",
+	"registeredCourses":	["mgc101"],
+	"department":	"art"
 }`  
 - DEL  
-/webapi/lectures/{id}
+/webapi/students/{id}
 
-Program
+Boards
 
 - GET
-/webapi/programs
+/webapi/boards
 - POST
-/webapi/programs  
+/webapi/boards  
 `{
-	"courses": [
-		{
-		"lectures":		[{
-						"notes":		"Jackie",
-						"material":		"no image"
-						}],
-		"board":		"default board",
-		"roster":		"roster",
-		"students":		["1"],
-		"professor":	"111",
-		"studentsTA":	"22"
-		}
-	]
+    "announcements": [
+        "123123",
+        "123124"
+    ],
+    "boardId": "33",
+    "courseId": "11"
 }`
 - PUT   
-/webapi/programs/{id}  
+/webapi/boards/{id}  
 `{
-    "courses": [
-        {
-            "board": "default board",
-            "courseId": 0,
-            "lectures": [
-                {
-                    "lectureId": 0,
-                    "material": "no image",
-                    "name": "7000",
-                    "notes": "Jackie"
-                }
-            ],
-            "professor": 111,
-            "roster": "roster",
-            "studentTA": 0,
-            "students": [
-                1
-            ]
-        }
-    ],
-    "courseId": 1
+    "announcements": [
+        "0000",
+    ]
 }`  
 - DEL
-/webapi/courses/{id}  
+/webapi/boards/{id}  
 
 Course
 
@@ -102,40 +81,42 @@ Course
 - POST
 /webapi/courses  
 `{
-            "board": "default",
-            "courseId": 0,
-            "lectures": [
-                {
-                    "lectureId": 1,
-                    "material": "no image",
-                    "notes": "lalaland"
-                }
-            ],
-            "professor": 111,
-            "roster": "roster",
-            "studentTA": 0,
-            "students": [
-                1
+            "boardId": "default",
+            "courseId": "mgc101",
+            "professorId": "111",
+            "department": "magic",
+            "TAId": 0,
+            "enrolledStudent": [
+                "rub.ros",
+                "jau.arc"
             ]
 }`
 - PUT   
 /webapi/courses/{id}  
 `{
-            "board": "default board",
-            "courseId": 0,
-            "lectures": [
-                {
-                    "lectureId": 0,
-                    "material": "no image",
-                    "notes": "Mia"
-                }
-            ],
-            "professor": 111,
-            "roster": "LALALAND",
-            "studentTA": 0,
-            "students": [
-                1
+            "department": "general",
+            "enrolledStudent": [
+                "jau.arc"
             ]
-        }`  
+}`  
 - DEL
 /webapi/courses/{id}  
+
+Course
+
+- GET
+/webapi/announcements
+- POST
+/webapi/announcements
+`{
+	"boardId": 		"33",
+	"announcementId":	"111",
+	"announcementText": 	"blabla"
+}`  
+- PUT   
+/webapi/courses/{boardId}\_{anouncementId}
+`{
+	"announcementText": 	"biubiubiu"
+}`
+- DEL   
+/webapi/courses/{boardId}\_{anouncementId}
